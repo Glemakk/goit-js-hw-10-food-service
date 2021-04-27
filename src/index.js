@@ -25,7 +25,7 @@ function createMenuCardsMarkup(menu) {
 //---------------------------------------------------
 
 refs.checkbox.addEventListener('change', onChangeThemeClick);
-refs.checkbox.addEventListener('change', saveValueInLocalStorage);
+refs.body.addEventListener('change', saveValueInLocalStorage);
 
 
 function onChangeThemeClick(e) {
@@ -40,10 +40,11 @@ function onChangeThemeClick(e) {
         localStorage.setItem('theme', Theme.LIGHT);
         
 
-        console.log(localStorage);
+        // console.log(localStorage);
     }
 };
 
+saveValueInLocalStorage();
 
 function saveValueInLocalStorage() {
     const themeInLocalStorage = localStorage.getItem('theme');
