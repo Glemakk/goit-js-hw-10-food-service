@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./js/theme.js","webpack:///./index.js"],"names":["localStorage","setItem"],"mappings":"8EAAAA,aAAaC,QAAQ,QAAS,e,yDCA9B,6B","file":"main.c8fddc8681f6c85c5ecf.js","sourcesContent":["localStorage.setItem('theme', 'dark-theme');","import './styles.css';\r\nimport './js/theme';"],"sourceRoot":""}
