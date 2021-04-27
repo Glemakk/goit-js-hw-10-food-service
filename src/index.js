@@ -11,7 +11,7 @@ const Theme = {
 const refs = {
     checkbox: document.querySelector('#theme-switch-toggle'),
     menu: document.querySelector('.js-menu'),
-    body: document.querySelector('body'),
+    body: document.body,
 }
 
 const menuMarkup = createMenuCardsMarkup(menu);
@@ -24,11 +24,11 @@ function createMenuCardsMarkup(menu) {
 
 //---------------------------------------------------
 
-refs.checkbox.addEventListener('change', onChangeThemeClick);
+refs.checkbox.addEventListener('change', onChangeTheme);
 refs.body.addEventListener('change', saveValueInLocalStorage);
 
 
-function onChangeThemeClick(e) {
+function onChangeTheme(e) {
     if (e.target.checked === true) {
         refs.body.classList.add(Theme.DARK);
         refs.body.classList.remove(Theme.LIGHT);
@@ -38,8 +38,6 @@ function onChangeThemeClick(e) {
         refs.body.classList.remove(Theme.DARK);
         localStorage.removeItem('theme', Theme.DARK)
         localStorage.setItem('theme', Theme.LIGHT);
-        
-
         // console.log(localStorage);
     }
 };
